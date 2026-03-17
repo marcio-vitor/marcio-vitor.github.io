@@ -22,7 +22,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #8e44ad;
+    color: #000000;
 }
 
 .container {
@@ -49,3 +49,31 @@ footer {
     font-size: 0.8em;
     color: #666;
 }
+
+<style>
+  .custom-button {
+    background-color: #a827ed;
+    color: #FFFFFF; 
+    /* Mudamos para sans-serif para combinar com o design moderno */
+    font-family: system-ui, -apple-system, sans-serif;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    border: 1px solid #000000;
+    
+    /* A transição fica aqui para ser suave na entrada E na saída */
+    transition: all 0.3s ease;
+  }
+
+  .custom-button:hover {
+    color: #FFFFFF;
+    box-shadow: 0 4px 12px rgba(168, 39, 237, 0.4); /* Sombra da cor do botão fica mais bonito */
+    filter: brightness(110%);
+    transform: scale(1.05); 
+  }
+
