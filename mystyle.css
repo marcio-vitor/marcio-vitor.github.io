@@ -1,3 +1,4 @@
+
 body {
     font-family: 'Arial', sans-serif;
     background-color: #0b0b0b;
@@ -13,17 +14,20 @@ header {
     border-bottom: 2px solid #8e44ad;
 }
 
+
 nav a {
     color: #fff;
     margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
     text-transform: uppercase;
+    transition: color 0.3s;
 }
 
 nav a:hover {
-    color: #000000;
+    color: #8e44ad; 
 }
+
 
 .container {
     max-width: 900px;
@@ -43,18 +47,40 @@ h1, h2 {
     border-left: 5px solid #8e44ad;
 }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    font-size: 0.8em;
-    color: #666;
+
+.music-table {
+    width: 100%;
+    border-collapse: collapse; 
+    margin-bottom: 30px;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #8e44ad;
 }
 
-<style>
-  .custom-button {
+.music-table th {
+    background-color: #8e44ad;
+    color: white;
+    padding: 12px;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+.music-table td {
+    padding: 12px;
+    border: 1px solid #333; 
+    color: #fff;
+}
+
+.music-table tr:hover {
+    background-color: #252525;
+}
+
+
+.custom-button {
     background-color: #a827ed;
     color: #FFFFFF; 
-    /* Mudamos para sans-serif para combinar com o design moderno */
     font-family: system-ui, -apple-system, sans-serif;
     text-decoration: none;
     display: inline-flex;
@@ -65,15 +91,19 @@ footer {
     cursor: pointer;
     font-weight: bold;
     border: 1px solid #000000;
-    
-    /* A transição fica aqui para ser suave na entrada E na saída */
     transition: all 0.3s ease;
-  }
+}
 
-  .custom-button:hover {
-    color: #FFFFFF;
-    box-shadow: 0 4px 12px rgba(168, 39, 237, 0.4); /* Sombra da cor do botão fica mais bonito */
+.custom-button:hover {
+    box-shadow: 0 4px 12px rgba(168, 39, 237, 0.4);
     filter: brightness(110%);
     transform: scale(1.05); 
-  }
+}
 
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.8em;
+    color: #666;
+}
