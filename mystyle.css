@@ -1,109 +1,55 @@
+:root {
+    --primary: #8e44ad;
+    --primary-light: #a827ed;
+    --bg-dark: #0b0b0b;
+    --card-bg: #1a1a1a;
+}
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #0b0b0b;
-    color: #fff;
+    font-family: 'Inter', system-ui, sans-serif; 
+    background-color: var(--bg-dark);
+    color: #e0e0e0; 
     margin: 0;
     line-height: 1.6;
 }
 
-header {
-    background-color: #1a1a1a;
-    padding: 20px;
-    text-align: center;
-    border-bottom: 2px solid #8e44ad;
-}
 
-
-nav a {
-    color: #fff;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: color 0.3s;
-}
-
-nav a:hover {
-    color: #8e44ad; 
-}
-
-
-.container {
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 20px;
-}
-
-h1, h2 {
-    color: #8e44ad;
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at top right, rgba(142, 68, 173, 0.15), transparent 400px);
+    z-index: -1;
 }
 
 .card {
-    background: #1a1a1a;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    border-left: 5px solid #8e44ad;
+    background: var(--card-bg);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px; 
+    border-left: 5px solid var(--primary);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    transition: transform 0.2s;
 }
 
+.card:hover {
+    transform: translateY(-5px);
+}
 
 .music-table {
-    width: 100%;
-    border-collapse: collapse; 
-    margin-bottom: 30px;
-    background-color: #1a1a1a;
-    border-radius: 8px;
+    border: none;
+    border-radius: 12px;
     overflow: hidden;
-    border: 1px solid #8e44ad;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
 }
 
 .music-table th {
-    background-color: #8e44ad;
-    color: white;
-    padding: 12px;
-    text-align: left;
-    text-transform: uppercase;
-    font-size: 0.9em;
+    background-color: var(--primary);
+    font-weight: 600;
 }
 
 .music-table td {
-    padding: 12px;
-    border: 1px solid #333; 
-    color: #fff;
-}
-
-.music-table tr:hover {
-    background-color: #252525;
-}
-
-
-.custom-button {
-    background-color: #a827ed;
-    color: #FFFFFF; 
-    font-family: system-ui, -apple-system, sans-serif;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    cursor: pointer;
-    font-weight: bold;
-    border: 1px solid #000000;
-    transition: all 0.3s ease;
-}
-
-.custom-button:hover {
-    box-shadow: 0 4px 12px rgba(168, 39, 237, 0.4);
-    filter: brightness(110%);
-    transform: scale(1.05); 
-}
-
-
-footer {
-    text-align: center;
-    padding: 20px;
-    font-size: 0.8em;
-    color: #666;
+    border-bottom: 1px solid #252525; 
+    border-right: none;
+    border-left: none;
 }
