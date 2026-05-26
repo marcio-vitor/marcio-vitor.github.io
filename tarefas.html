@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minhas Tarefas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Minhas Tarefas</h1>
+
+    <div class="task-input">
+      <input type="text" id="taskInput" placeholder="Digite uma tarefa...">
+      <button onclick="addTask()">Adicionar</button>
+    </div>
+
+    <ul id="taskList"></ul>
+
+    <a href="index.html" class="btn voltar">
+      Voltar
+    </a>
+  </div>
+
+  <script>
+    function addTask() {
+      const input = document.getElementById('taskInput');
+      const taskText = input.value.trim();
+
+      if(taskText === '') {
+        alert('Digite uma tarefa!');
+        return;
+      }
+
+      const li = document.createElement('li');
+      li.innerHTML = `
+        <span>${taskText}</span>
+        <div class="buttons">
+          <button class="complete-btn" onclick="completeTask(this)">✔</button>
+          <button class="delete-btn" onclick="deleteTask(this)">✖</button>
+        </div>
+      `;
+
+      document.getElementById('taskList').appendChild(li);
+      input.value = '';
+    }
+
+    function completeTask(button) {
+      const li = button.parentElement.parentElement;
+      li.classList.toggle('completed');
+    }
+
+    function deleteTask(button) {
+      const li = button.parentElement.parentElement;
+      li.remove();
+    }
+  </script>
+
+</body>
+</html>
