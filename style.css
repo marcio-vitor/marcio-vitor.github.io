@@ -21,18 +21,31 @@ body {
   border-radius: 20px;
   padding: 25px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  text-align: center;
 }
 
 h1 {
-  text-align: center;
   color: #4f46e5;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 p {
-  text-align: center;
   color: #666;
   margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  background: #4f46e5;
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #372fcf;
 }
 
 .task-input {
@@ -46,7 +59,6 @@ p {
   padding: 12px;
   border: 2px solid #ddd;
   border-radius: 10px;
-  outline: none;
 }
 
 .task-input button {
@@ -56,11 +68,6 @@ p {
   padding: 12px 18px;
   border-radius: 10px;
   cursor: pointer;
-  transition: 0.3s;
-}
-
-.task-input button:hover {
-  background: #372fcf;
 }
 
 ul {
@@ -104,9 +111,6 @@ li.completed {
   background: #ef4444;
 }
 
-.footer {
-  margin-top: 20px;
-  text-align: center;
-  color: #777;
-  font-size: 14px;
+.voltar {
+  margin-top: 15px;
 }
